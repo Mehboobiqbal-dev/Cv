@@ -76,7 +76,7 @@ const Intro = () => {
               {/* Download CV Button */}
               <Link
                 className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'
-                href='https://docs.google.com/document/d/17nnShVYpkEDcRS-QuWASWACUbhmAyM35/edit?usp=sharing&ouid=108011518660717607588&rtpof=true&sd=true'
+                href='https://drive.google.com/file/d/1V2--Fimndal7FJUc8mXBjzB-CDB_N4VF/view?usp=sharing'
                 target='_blank'
               >
                 Download CV
