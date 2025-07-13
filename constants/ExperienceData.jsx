@@ -14,7 +14,7 @@ export const ExperienceData = [
   },
   {
     companyName: "Robiatics Corp",
-    location: "Remote",
+    location: "Islamabad, Pakistan ",
     role: "Web Developer",
     fromTo: "Dec 2024 - Apr 2025",
     description:
