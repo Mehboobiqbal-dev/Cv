@@ -1,5 +1,15 @@
 export const ProjectsData = [
   {
+    projectName: "Elch AI agent",
+    liveUrl: "https://www.elch.live/",
+    githubUrl: "https://github.com/Mehboobiqbal-dev/Elch",
+    projectImage: {
+      imageUrl: "https://i.ibb.co/Q3q8k6n9/image.png"
+    },
+    techs: [ "React JS", "TailwindCSS", "Fast API", "PostgreSQL", "Redux Toolkit" ]
+
+  },
+  {
     projectName: "CertifiedSkill.org",
     liveUrl: "https://www.certifiedskill.org/",
     githubUrl: "https://github.com/Mehboobiqbal-dev/certifiedskill.org",
