@@ -124,18 +124,18 @@ const About = () => {
                 </p>
               </div>
               <p className="text-center md:text-left text-[#c72c6c] dark:text-[#07d0e5]">
-                3
+                6
               </p>
             </div>
           </div>
 
           <div className="mt-5 justify-evenly text-justify">
             <p className="text-gray-600 dark:text-gray-300">
-              I am a full-stack web developer with expertise in both frontend and backend technologies, specializing in creating dynamic web applications. My proficiency lies in using modern frameworks and tools like Next.js and React, enabling me to build highly interactive and scalable web solutions.
+            I’m a passionate Full Stack Developer with hands-on experience building modern, scalable web applications using Next.js, React.js, Node.js, and FastAPI. I love crafting efficient, clean, and high-performance solutions that merge design with powerful backend logic.
               <br />
               On the frontend, I have a strong command of JavaScript and Tailwind CSS, allowing me to design responsive, user-friendly, and visually appealing interfaces. My approach to web development is focused on delivering seamless user experiences, with a strong emphasis on UI/UX principles.
               <br />
-              In terms of backend, I am well-versed in MongoDB for database management and have hands-on experience with AWS for cloud computing and serverless architecture. My skills extend to API integration, enabling smooth communication between various services and enhancing the functionality of applications. I am adept at managing user data securely and efficiently, ensuring data integrity and performance at scale.
+              My work focuses on building automation tools, intelligent web platforms, and AI-driven systems — combining creativity with technical depth. I enjoy turning complex ideas into seamless user experiences and bringing automation to life through smart APIs and integrations.
               <br />
               I am passionate about leveraging my skills to build innovative and impactful solutions while staying at the forefront of emerging web technologies.
             </p>
