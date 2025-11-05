@@ -18,6 +18,8 @@ import { BsGit, BsGithub } from "react-icons/bs";
 import { FaBootstrap, FaCss3Alt, FaAngular, FaPhp, FaShopify, FaJava } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
+import { SiFastapi } from "react-icons/si";
+import { DiReact, DiPython } from "react-icons/di";
 
 export const TechStackData = [
   {
@@ -25,6 +27,11 @@ export const TechStackData = [
       {
         name: "ReactJS",
         icon: <DiReact className="md:text-4xl text-2xl" color="#53c1de" />,
+      },
+      {
+        name: "NextJS",
+        icon: <SiNextdotjs className="md:text-4xl text-2xl dark:text-white text-black" />,
+
       },
       {
         name: "JavaScript",
@@ -35,17 +42,14 @@ export const TechStackData = [
         icon: <SiRedux className="md:text-4xl text-2xl" color="#7e57c2" />,
       },
       {
-        name: "HTML5",
-        icon: <AiFillHtml5 className="md:text-4xl text-2xl" color="#fa6700" />,
+        name: "Python",
+        icon: <DiPython className="md:text-4xl text-2xl" color="#3776AB" />,
       },
       {
         name: "CSS3",
         icon: <FaCss3Alt className="md:text-4xl text-2xl" color="#039be5" />,
       },
-      {
-        name: "Bootstrap",
-        icon: <FaBootstrap className="md:text-4xl text-2xl" color="#673ab7" />,
-      },
+     
       {
         name: "Tailwind CSS",
         icon: <SiTailwindcss className="md:text-4xl text-2xl" color="#4caf50" />,
@@ -68,9 +72,10 @@ export const TechStackData = [
       },
     ],
     Good: [
+      
       {
-        name: "NextJS",
-        icon: <SiNextdotjs className="md:text-4xl text-2xl dark:text-white text-black" />,
+        name: "FastAPI",
+        icon: <SiFastapi className="md:text-4xl text-2xl" color="#009688" />,
       },
       {
         name: "NodeJS",
@@ -79,6 +84,10 @@ export const TechStackData = [
       {
         name: "Express",
         icon: <SiExpress className="md:text-4xl text-2xl" color="#555555" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="md:text-4xl text-2xl" color="#377cc8" />,
       },
       {
         name: "MongoDB",
@@ -102,10 +111,7 @@ export const TechStackData = [
       },
     ],
     Familiar: [
-      {
-        name: "TypeScript",
-        icon: <SiTypescript className="md:text-4xl text-2xl" color="#377cc8" />,
-      },
+     
       {
         name: "Angular",
         icon: <FaAngular className="md:text-4xl text-2xl" color="#c50836" />,
