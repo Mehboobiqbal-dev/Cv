@@ -12,14 +12,14 @@ import {
   SiFirebase,
   SiTypescript,
   SiJquery,
+  SiFastapi,
 } from "react-icons/si";
-import { DiJavascript1, DiReact, DiMongodb, DiSass } from "react-icons/di";
+import { DiJavascript1, DiReact, DiMongodb, DiSass, DiPython } from "react-icons/di";
 import { BsGit, BsGithub } from "react-icons/bs";
 import { FaBootstrap, FaCss3Alt, FaAngular, FaPhp, FaShopify, FaJava } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
-import { SiFastapi } from "react-icons/si";
-import { DiReact, DiPython } from "react-icons/di";
+
 
 export const TechStackData = [
   {
