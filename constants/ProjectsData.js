@@ -2,11 +2,11 @@ export const ProjectsData = [
   {
     projectName: "Elch AI agent",
     liveUrl: "https://www.elch.live/",
-    githubUrl: "https://github.com/Mehboobiqbal-dev/Elch",
+    githubUrl: "https://github.com/Mehboobiqbal-dev/plantin-copy",
     projectImage: {
-      imageUrl: "https://i.ibb.co/Q3q8k6n9/image.png"
+      imageUrl: "https://i.ibb.co/789YqfV/Screenshot-52.png"
     },
-    techs: [ "React JS", "TailwindCSS", "Fast API", "PostgreSQL", "Redux Toolkit" ]
+    techs: ["NextJS", "TailwindCSS", "MongoDB", "Redux Toolkit"]
 
   },
   {
@@ -23,11 +23,7 @@ export const ProjectsData = [
   {
     projectName: "Plantin",
     liveUrl: "https://plantin-pink.vercel.app/",
-    githubUrl: "https://github.com/Mehboobiqbal-dev/plantin-copy",
-    projectImage: {
-      imageUrl: "https://i.ibb.co/789YqfV/Screenshot-52.png"
-    },
-    techs: ["NextJS", "TailwindCSS", "MongoDB", "Redux Toolkit"]
+   
   },
   {
     projectName: "Eztrak",
