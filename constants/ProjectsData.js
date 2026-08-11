@@ -8,8 +8,8 @@ export const ProjectsData = [
       alt: "Road Biker motorcycle gear e-commerce storefront",
     },
     description:
-      "A bilingual motorcycle gear storefront with product discovery, category navigation, search, wishlist, comparison, and cart journeys.",
-    techs: ["PHP", "MySQL", "E-commerce", "JavaScript", "Responsive UI"],
+      "A bilingual motorcycle gear ecosystem spanning the storefront plus two Flutter products: the Road Biker customer app and Road Biker Service app.",
+    techs: ["Flutter", "PHP", "MySQL", "E-commerce", "REST APIs", "Responsive UI"],
     featured: true,
   },
   {

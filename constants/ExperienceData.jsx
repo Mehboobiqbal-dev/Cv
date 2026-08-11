@@ -1,37 +1,40 @@
 export const ExperienceData = [
   {
+    companyName: "Roadbiker Hail",
+    location: "Hail, Saudi Arabia",
+    role: "Full-Stack & Flutter Developer",
+    fromTo: "Apr 2026 - Present",
+    current: true,
+    description:
+      "Building and improving the Road Biker digital ecosystem across e-commerce, internal services, and customer-facing mobile products.",
+    highlights: [
+      "Built two Flutter applications: Road Biker and Road Biker Service.",
+      "Developed and maintained PHP and MySQL services, APIs, and commerce workflows.",
+      "Delivered responsive, Arabic-first experiences for road-biker.com and ilm-roadbiker.com.",
+    ],
+  },
+  {
+    companyName: "Centangle Interactive",
+    location: "Remote",
+    role: "Full-Stack Developer",
+    fromTo: "Apr 2025 - Apr 2026",
+    description:
+      "Developed scalable frontend modules with Next.js, React, micro-frontend architecture, and .NET APIs. Contributed to planning, code reviews, and cross-functional delivery of enterprise-grade solutions.",
+  },
+  {
+    companyName: "Robiatics Corp",
+    location: "Islamabad, Pakistan",
+    role: "Web Developer",
+    fromTo: "Dec 2024 - Apr 2025",
+    description:
+      "Built and maintained responsive web interfaces in collaboration with designers and backend developers, with a focus on performance, UI consistency, and real-time data visualization.",
+  },
+  {
     companyName: "Purqle LLC",
     location: "Istanbul, Turkey",
     role: "Virtual Assistant",
     fromTo: "Feb 2024 - Dec 2024",
     description:
-      "Engaged in Managing, Staffing, Sourcing Product, Consulting and marketing for projects related. " +
-      "Data Extraction and Management: Will extract data from various sources and maintain in structured formats. " +
-      "Administrative Support: Will manage, prepare and format documents, presentations, and reports. Will manage " +
-      "email correspondence, schedule meetings, and handle calendar management. Conduct research and compile " +
-      "information as needed for various projects.",
-    side: "left",
-  },
-  {
-    companyName: "Robiatics Corp",
-    location: "Islamabad, Pakistan ",
-    role: "Web Developer",
-    fromTo: "Dec 2024 - Apr 2025",
-    description:
-      "Built and maintained the frontend of Robiatics Corp's web platform. " +
-      "Collaborated closely with designers and backend developers to deliver a responsive and user-friendly interface. " +
-      "Focused on performance optimization, UI consistency, and integrating real-time data visualization.",
-    side: "right",
-  },
-  {
-    companyName: "Centangle Interactive",
-    location: "Remote",
-    role: "Full Stack Developer",
-    fromTo: "Apr 2025 - Present",
-    description:
-      "Worked with modern web stack including Next.js, React, Microfrontend architecture, and .NET backend. " +
-      "Developed scalable frontend modules and integrated them with robust .NET-based APIs. " +
-      "Participated in planning, code reviews, and cross-functional collaboration for delivering enterprise-grade solutions.",
-    side: "left",
+      "Supported product sourcing, marketing, structured data management, research, reporting, documentation, email correspondence, and project coordination.",
   },
 ];
