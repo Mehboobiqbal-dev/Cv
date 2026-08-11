@@ -3,6 +3,8 @@
 # dependencies
 /node_modules
 /.npm-cache/
+/.pnpm-tools/
+/.pnpm-store/
 /.pnp
 .pnp.js
 
