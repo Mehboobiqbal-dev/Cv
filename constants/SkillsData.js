@@ -47,6 +47,18 @@ export const TechStackData = [
         icon: <DiPython className="md:text-4xl text-2xl" color="#3776AB" />,
       },
       {
+        name: "PHP",
+        icon: <FaPhp className="md:text-4xl text-2xl" color="#777BB4" />,
+      },
+      {
+        name: "MySQL",
+        icon: <GrMysql className="md:text-4xl text-2xl" color="#4479A1" />,
+      },
+      {
+        name: "Flutter",
+        icon: <SiFlutter className="md:text-4xl text-2xl" color="#54C5F8" />,
+      },
+      {
         name: "CSS3",
         icon: <FaCss3Alt className="md:text-4xl text-2xl" color="#039be5" />,
       },
@@ -73,19 +85,6 @@ export const TechStackData = [
       },
     ],
     Good: [
-      {
-        name: "PHP",
-        icon: <FaPhp className="md:text-4xl text-2xl" color="#777BB4" />,
-      },
-      {
-        name: "MySQL",
-        icon: <GrMysql className="md:text-4xl text-2xl" color="#4479A1" />,
-      },
-      {
-        name: "Flutter",
-        icon: <SiFlutter className="md:text-4xl text-2xl" color="#54C5F8" />,
-      },
-      
       {
         name: "FastAPI",
         icon: <SiFastapi className="md:text-4xl text-2xl" color="#009688" />,
