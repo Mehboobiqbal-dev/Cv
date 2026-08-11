@@ -22,18 +22,22 @@ const Home = () => {
   return (
     <Fragment>
       <Head>
-        <title>Mehboob Iqbal&apos;s Portfolio</title>
+        <title>Mehboob Iqbal | Full-Stack &amp; Mobile Developer</title>
 
         {/* Meta Tags */}
         <meta
-          content="portfolio, Next.js, React.js, web development, dark theme, light theme, best portfolio github, best next js portfolio, how to make a portfolio, best react js portfolio github, best react js portfolio, best next js portfolio, react js developer in khanewale, react js developer in Jaipur, react js developer in India, react js developer in Rajasthan"
+          content="Mehboob Iqbal, full-stack developer, Next.js developer, PHP developer, Flutter developer, MySQL, React, e-commerce developer, Pakistan"
           name="keywords"
         />
-        <meta content="Shivraj Gurjar" name="author" />
+        <meta content="Mehboob Iqbal" name="author" />
+        <meta
+          content="Portfolio of Mehboob Iqbal, a full-stack and mobile developer building production-ready web, e-commerce, AI, and Flutter experiences."
+          name="description"
+        />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
         {/* Favicon */}
-        <link href="https://shiv-s-portfolio.vercel.app/favicon.ico" rel="icon" type="image/x-icon" />
+        <link href="/favicon.ico" rel="icon" type="image/x-icon" />
       </Head>
       
       <div>

@@ -1,100 +1,121 @@
-"use client";
-import React, { Fragment, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import {
+  HiArrowDown,
+  HiArrowUpRight,
+  HiCheckCircle,
+  HiDocumentArrowDown,
+} from "react-icons/hi2";
+
+const coreSkills = ["Next.js", "PHP", "Flutter", "MySQL", "AI integrations"];
 
 const Intro = () => {
-  const [isHome, setIsHome] = useState(false);
-
-  const homeRef = useRef();
-  const introRef = useRef();
-  const profileRef = useRef();
-
-  // Intersection observer animation on scroll
-  useEffect(() => {
-    const getScreenWidth = () =>
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
-
-    // Scroll Animation
-    if (homeRef.current) {
-      const homeObserver = new IntersectionObserver(
-        ([homeEntry]) => {
-          setIsHome(homeEntry.isIntersecting);
-        },
-        {
-          rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
-        }
-      );
-
-      homeObserver.observe(homeRef.current);
-
-      if (isHome) {
-        profileRef.current.classList.add("slide-in");
-        introRef.current.classList.add("slide-in");
-      } else {
-        profileRef.current.classList.remove("slide-in");
-        introRef.current.classList.remove("slide-in");
-      }
-    }
-  }, [homeRef, isHome]);
-
   return (
-    <Fragment>
+    <>
       <Head>
-        <title>Mehboob Iqbal&apos;s Portfolio</title>
+        <title>Mehboob Iqbal | Full-Stack & Mobile Developer</title>
       </Head>
-      <section id='home'>
-        <div
-          className='min-h-[100vh] overflow-x-hidden px-[20px] md:px-[200px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between shadow-zinc-300 dark:shadow-zinc-700 shadow-sm'
-          ref={homeRef}
-        >
-          <div
-            className='translate-x-[-500px] transition-all duration-700 opacity-0'
-            ref={introRef}
-          >
-            <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
-              Hi There !
+      <section
+        id="home"
+        className="relative min-h-screen overflow-hidden bg-white px-5 pb-20 pt-32 shadow-sm shadow-zinc-300 dark:bg-zinc-950 dark:shadow-zinc-800 md:px-10 md:pt-36"
+      >
+        <div className="absolute -right-24 top-24 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl" />
+        <div className="absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-rose-400/20 blur-3xl" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-800 dark:border-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+              Open to high-impact opportunities
+            </div>
+
+            <p className="text-base font-bold uppercase tracking-[0.2em] text-red-600 dark:text-cyan-400">
+              Mehboob Iqbal · Full-stack developer
             </p>
-            {/* Profile Name */}
-            <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
-              I&apos;m a full stack
-              <span className='text-[#c72c6c] dark:text-[#07d0e5]'>
-                {" "}
-                developer <span className='text-white'>|</span>
-              </span>
+            <h1 className="mt-5 max-w-4xl text-left text-5xl font-black leading-[1.05] tracking-tight text-zinc-950 dark:text-white md:text-7xl">
+              I turn ambitious ideas into products people enjoy using.
+            </h1>
+            <p className="mt-7 max-w-2xl text-left text-lg leading-8 text-slate-600 dark:text-slate-300 md:text-xl">
+              I build polished web and mobile experiences from interface to
+              database—combining React and Next.js with PHP, Node.js, Flutter,
+              MySQL, APIs, and practical AI integrations.
             </p>
-            <div className='mt-5 md:mt-10 flex gap-3'>
-              {/* Hire Me Button */}
+
+            <div className="mt-8 flex flex-wrap gap-2">
+              {coreSkills.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold shadow-sm dark:border-zinc-700 dark:bg-zinc-900"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
-                href={"#getInTouch"}
+                className="inline-flex items-center gap-2 rounded-full bg-zinc-950 px-6 py-3 text-lg font-bold text-white transition hover:-translate-y-0.5 hover:bg-red-600 dark:bg-white dark:text-zinc-950 dark:hover:bg-cyan-400"
+                href="#getInTouch"
               >
-                Hire me
+                Let&apos;s work together <HiArrowUpRight />
               </Link>
-              {/* Download CV Button */}
               <Link
-                className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'
-                href='https://drive.google.com/file/d/1A0Ie6U5slvTACqmDoCcfv2oRzwtIV3AL/view?usp=drivesdk'
-                target='_blank'
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-lg font-bold transition hover:border-zinc-950 dark:border-zinc-700 dark:hover:border-white"
+                href="#project"
               >
-                Download CV
+                Explore my work <HiArrowDown />
               </Link>
+              <a
+                className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-lg font-bold transition hover:border-zinc-950 dark:border-zinc-700 dark:hover:border-white"
+                href="/assets/Mehboob-Iqbal-CV.pdf"
+                download="Mehboob-Iqbal-CV.pdf"
+              >
+                Download CV <HiDocumentArrowDown />
+              </a>
             </div>
           </div>
 
-          {/* Image */}
-          <div
-            className={
-              "translate-x-[500px] transition-all opacity-0 duration-700 w-[180px] h-[300px] md:w-[240px] md:h-[400px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat"
-            }
-            ref={profileRef}
-            style={{ backgroundImage: "url(/images/male.png)" }}
-          />
+          <div className="relative">
+            <div className="rounded-[2rem] border border-slate-200 bg-zinc-950 p-7 text-white shadow-2xl shadow-slate-300/60 dark:border-zinc-800 dark:shadow-black/40 md:p-9">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
+                What I bring
+              </p>
+              <h2 className="mt-4 text-left text-3xl font-bold leading-tight">
+                One developer. Complete product thinking.
+              </h2>
+              <div className="mt-8 space-y-5">
+                {[
+                  "Conversion-focused, responsive interfaces",
+                  "Scalable APIs, databases, and integrations",
+                  "Web, mobile, e-commerce, and AI delivery",
+                  "Clear communication from idea to launch",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <HiCheckCircle className="mt-0.5 shrink-0 text-2xl text-cyan-400" />
+                    <p className="text-left leading-7 text-zinc-200">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-9 grid grid-cols-3 gap-3 border-t border-zinc-700 pt-7">
+                <div>
+                  <p className="text-2xl font-black text-amber-400">7+</p>
+                  <p className="mt-1 text-left text-xs text-zinc-400">Selected projects</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-black text-amber-400">2</p>
+                  <p className="mt-1 text-left text-xs text-zinc-400">Commerce launches</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-black text-amber-400">Web + App</p>
+                  <p className="mt-1 text-left text-xs text-zinc-400">End-to-end delivery</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-    </Fragment>
+    </>
   );
 };
 

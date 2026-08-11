@@ -80,7 +80,7 @@ const TechStack = () => {
               techBoxesRef.current?.classList.remove("pop-up-child");
             }}
           >
-            Advance
+            Advanced
           </button>
           <button
             className={`w-[120px] md:w-[150px] p-2 font-bold ${

@@ -1,130 +1,109 @@
 "use client";
-import React, { Fragment, useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import { CgWebsite } from "react-icons/cg";
-import { HiExternalLink } from "react-icons/hi";
-import { BsGithub } from "react-icons/bs";
 
+import Image from "next/image";
+import Link from "next/link";
+import { BsGithub } from "react-icons/bs";
+import { CgWebsite } from "react-icons/cg";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { ProjectsData } from "@/constants";
 
-const Project = () => {
-  const [height1, setHeight1] = useState("");
-  const [isProjects, setIsProjects] = useState(false);
-  const projectRef = useRef();
-  const projectBoxesRef = useRef();
-
-  useEffect(() => {
-    if (projectRef.current) {
-      const projectsObserver = new IntersectionObserver(
-        ([projectsEntry]) => {
-          setIsProjects(projectsEntry.isIntersecting);
-        },
-        {
-          rootMargin: "-100px",
-        }
-      );
-
-      projectsObserver.observe(projectRef.current);
-
-      if (isProjects) {
-        projectBoxesRef.current.classList.add("pop-up-child");
-      } else {
-        projectBoxesRef.current.classList.remove("pop-up-child");
-      }
-    }
-  }, [isProjects, projectRef]);
-
+const Projects = () => {
   return (
-    <Fragment>
-      <section id='project' ref={projectRef}>
-        <h2 className='text-3xl font-bold text-center pt-4 pb-8 flex justify-center items-center gap-3'>
-          <CgWebsite /> Projects
-        </h2>
+    <section
+      id="project"
+      className="overflow-hidden bg-slate-50 px-5 py-20 shadow-sm shadow-zinc-300 dark:bg-zinc-950 dark:shadow-zinc-800 md:px-10"
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="mb-3 text-center text-sm font-bold uppercase tracking-[0.25em] text-red-600 dark:text-cyan-400">
+            Selected work
+          </p>
+          <h2 className="flex items-center justify-center gap-3 text-3xl font-bold md:text-5xl">
+            <CgWebsite /> Projects built for real users
+          </h2>
+          <p className="mt-5 text-center text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg">
+            From bilingual e-commerce stores to AI products and enterprise
+            platforms, I build complete digital experiences that are fast,
+            responsive, and ready for production.
+          </p>
+        </div>
 
-        <div
-          className='min-h-[400px] pop-down-child pb-[30px] flex flex-wrap px-[20px] gap-8 justify-around items-center shadow-sm shadow-zinc-300 dark:shadow-zinc-700'
-          ref={projectBoxesRef}
-        >
+        <div className="grid gap-7 lg:grid-cols-2">
           {ProjectsData.map((project) => (
-            <div
-              className='transition-all duration-700 w-[330px]'
+            <article
+              className={`group overflow-hidden rounded-3xl border bg-white transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-zinc-900 ${
+                project.featured
+                  ? "border-amber-300 shadow-xl shadow-amber-100/60 dark:border-amber-500/50 dark:shadow-none"
+                  : "border-slate-200 shadow-lg shadow-slate-200/50 dark:border-zinc-800 dark:shadow-none"
+              }`}
               key={project.projectName}
             >
-              {/* Project Image */}
-              <div
-                className={
-                  "w-[330px] shadow-md shadow-zinc-300 dark:shadow-zinc-700 h-48 bg-no-repeat flex flex-col justify-end rounded overflow-hidden bg-cover"
-                }
-                onMouseLeave={() => setHeight1("")}
-                onMouseMove={() => setHeight1(project.projectName)}
-                style={{
-                  backgroundImage: `url(${
-                    project?.projectImage?.imageUrl || ""
-                  })`,
-                }}
-              >
-                <div
-                  className='bg-red-600 p-1 cursor-pointer'
-                  onMouseLeave={() => setHeight1("")}
-                  onMouseMove={() => setHeight1(project.projectName)}
-                >
-                  {/* Project Name */}
-                  <p
-                    className='text-white text-center'
-                    onClick={() =>
-                      setHeight1(height1 === "" ? project.projectName : "")
-                    }
-                  >
+              <div className="relative aspect-[16/9] overflow-hidden bg-slate-200 dark:bg-zinc-800">
+                <Image
+                  src={project.projectImage.imageUrl}
+                  alt={project.projectImage.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover object-top transition duration-500 group-hover:scale-[1.025]"
+                />
+                {project.featured ? (
+                  <span className="absolute left-4 top-4 rounded-full bg-amber-400 px-3 py-1 text-xs font-extrabold uppercase tracking-wider text-zinc-950 shadow">
+                    Featured
+                  </span>
+                ) : null}
+              </div>
+
+              <div className="p-6 md:p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-red-600 dark:text-cyan-400">
+                  {project.eyebrow || "Full-stack project"}
+                </p>
+                <div className="mt-2 flex items-start justify-between gap-4">
+                  <h3 className="text-2xl font-bold md:text-3xl">
                     {project.projectName}
-                  </p>
-                  <div
-                    className='overflow-hidden transition-all duration-500 h-[70px] flex gap-10 justify-center items-center'
-                    style={
-                      height1 === project.projectName
-                        ? { maxHeight: "200px" }
-                        : { maxHeight: "0" }
-                    }
-                  >
-                    {/* GitHub Link */}
-                    {project.liveUrl && (
+                  </h3>
+                  <div className="flex shrink-0 gap-2">
+                    {project.githubUrl ? (
                       <Link
-                        className='text-xl text-white p-1 bg-gray-700 hover:bg-gray-950 rounded'
-                        href={project.liveUrl}
-                        target='_blank'
-                      >
-                        <HiExternalLink />
-                      </Link>
-                    )}
-                    {/* Live url */}
-                    {project.githubUrl && (
-                      <Link
-                        className='text-xl text-white p-1 bg-gray-700 hover:bg-gray-950 rounded'
+                        className="rounded-full border border-slate-300 p-2 text-lg transition hover:border-zinc-950 hover:bg-zinc-950 hover:text-white dark:border-zinc-700 dark:hover:border-white dark:hover:bg-white dark:hover:text-zinc-950"
                         href={project.githubUrl}
-                        target='_blank'
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`View ${project.projectName} source code`}
                       >
                         <BsGithub />
                       </Link>
-                    )}
+                    ) : null}
+                    <Link
+                      className="rounded-full bg-zinc-950 p-2 text-lg text-white transition hover:bg-red-600 dark:bg-white dark:text-zinc-950 dark:hover:bg-cyan-400"
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit ${project.projectName}`}
+                    >
+                      <HiArrowUpRight />
+                    </Link>
                   </div>
                 </div>
+                <p className="mt-4 leading-7 text-slate-600 dark:text-slate-300">
+                  {project.description}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.techs.map((tech) => (
+                    <span
+                      className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 dark:border-zinc-700 dark:bg-zinc-800 dark:text-slate-200"
+                      key={tech}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-              {/* Tech Stack */}
-              <div className='flex flex-wrap gap-2 mt-4'>
-                {project.techs.map((tech) => (
-                  <p
-                    className='px-1 text-sm rounded bg-blue-500 text-white'
-                    key={tech}
-                  >
-                    {tech}
-                  </p>
-                ))}
-              </div>
-            </div>
+            </article>
           ))}
         </div>
-      </section>
-    </Fragment>
+      </div>
+    </section>
   );
 };
 
-export default Project;
+export default Projects;

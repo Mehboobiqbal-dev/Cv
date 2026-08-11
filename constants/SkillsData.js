@@ -13,6 +13,7 @@ import {
   SiTypescript,
   SiJquery,
   SiFastapi,
+  SiFlutter,
 } from "react-icons/si";
 import { DiJavascript1, DiReact, DiMongodb, DiSass, DiPython } from "react-icons/di";
 import { BsGit, BsGithub } from "react-icons/bs";
@@ -72,6 +73,18 @@ export const TechStackData = [
       },
     ],
     Good: [
+      {
+        name: "PHP",
+        icon: <FaPhp className="md:text-4xl text-2xl" color="#777BB4" />,
+      },
+      {
+        name: "MySQL",
+        icon: <GrMysql className="md:text-4xl text-2xl" color="#4479A1" />,
+      },
+      {
+        name: "Flutter",
+        icon: <SiFlutter className="md:text-4xl text-2xl" color="#54C5F8" />,
+      },
       
       {
         name: "FastAPI",
@@ -121,20 +134,12 @@ export const TechStackData = [
         icon: <TbBrandReactNative className="md:text-4xl text-2xl" color="#66dbfb" />,
       },
       {
-        name: "PHP",
-        icon: <FaPhp className="md:text-4xl text-2xl" color="#7b7fb5" />,
-      },
-      {
         name: "JAVA",
         icon: <FaJava className="md:text-4xl text-2xl" color="#547c99" />,
       },
       {
         name: "SASS",
         icon: <DiSass className="md:text-4xl text-2xl" color="#f06292" />,
-      },
-      {
-        name: "MySQL",
-        icon: <GrMysql className="md:text-4xl text-2xl" color="#08668e" />,
       },
       {
         name: "Shopify",

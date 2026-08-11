@@ -7,6 +7,11 @@ module.exports = {
         hostname: 'encrypted-tbn0.gstatic.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.ibb.co',
+        pathname: '/**',
+      },
     ],
   },
 };
