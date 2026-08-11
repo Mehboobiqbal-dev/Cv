@@ -50,7 +50,7 @@ const WhyWorkWithMe = () => {
             {strengths.map((strength) => (
               <article
                 key={strength.title}
-                className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-6 transition hover:-translate-y-1 hover:border-zinc-600"
+                className="interactive-card rounded-3xl border border-zinc-800 bg-zinc-900/80 p-6"
               >
                 <div className="inline-flex rounded-2xl bg-white p-3 text-2xl text-red-600">
                   {strength.icon}

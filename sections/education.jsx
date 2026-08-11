@@ -49,7 +49,7 @@ const Education = () => {
         >
           {EducationData.map((education) => (
             <div
-              className="transition-all duration-700 flex border border-zinc-300 dark:border-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded gap-6"
+              className="interactive-card transition-all duration-700 flex border border-zinc-300 dark:border-zinc-700 shadow-md shadow-zinc-300 dark:shadow-zinc-700 rounded-xl gap-6"
               key={education.name}
             >
               {/* Removed the Image component */}

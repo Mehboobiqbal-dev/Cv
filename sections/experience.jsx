@@ -31,7 +31,7 @@ const Experience = () => {
                   index % 2 === 0 ? "md:-right-[42px]" : "md:-left-[42px]"
                 } ${experience.current ? "bg-emerald-500" : "bg-red-500"}`}
               />
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none md:p-8">
+              <div className="interactive-card rounded-3xl border border-slate-200 bg-white p-6 shadow-lg shadow-slate-200/60 dark:border-zinc-800 dark:bg-zinc-900 dark:shadow-none md:p-8">
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <p className="text-sm font-bold uppercase tracking-[0.15em] text-red-600 dark:text-cyan-400">
                     {experience.fromTo}

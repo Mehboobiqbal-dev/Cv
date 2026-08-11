@@ -56,7 +56,7 @@ const About = () => {
             {capabilities.map((capability) => (
               <article
                 key={capability.title}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6 dark:border-zinc-800 dark:bg-zinc-900"
+                className="interactive-card rounded-3xl border border-slate-200 bg-slate-50 p-6 dark:border-zinc-800 dark:bg-zinc-900"
               >
                 <div className="mb-5 inline-flex rounded-2xl bg-zinc-950 p-3 text-2xl text-cyan-400 dark:bg-white dark:text-red-600">
                   {capability.icon}

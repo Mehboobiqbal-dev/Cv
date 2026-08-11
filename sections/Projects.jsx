@@ -31,7 +31,7 @@ const Projects = () => {
         <div className="grid gap-7 lg:grid-cols-2">
           {ProjectsData.map((project) => (
             <article
-              className={`group overflow-hidden rounded-3xl border bg-white transition duration-300 hover:-translate-y-1 hover:shadow-2xl dark:bg-zinc-900 ${
+              className={`interactive-card group overflow-hidden rounded-3xl border bg-white dark:bg-zinc-900 ${
                 project.featured
                   ? "border-amber-300 shadow-xl shadow-amber-100/60 dark:border-amber-500/50 dark:shadow-none"
                   : "border-slate-200 shadow-lg shadow-slate-200/50 dark:border-zinc-800 dark:shadow-none"

@@ -76,7 +76,7 @@ const Intro = () => {
           </div>
 
           <div className="relative">
-            <div className="rounded-[2rem] border border-slate-200 bg-zinc-950 p-7 text-white shadow-2xl shadow-slate-300/60 dark:border-zinc-800 dark:shadow-black/40 md:p-9">
+            <div className="interactive-card rounded-[2rem] border border-slate-200 bg-zinc-950 p-7 text-white shadow-2xl shadow-slate-300/60 dark:border-zinc-800 dark:shadow-black/40 md:p-9">
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-amber-400">
                 What I bring
               </p>
