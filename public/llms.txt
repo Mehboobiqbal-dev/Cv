@@ -1,0 +1,46 @@
+# Mehboob Iqbal
+
+> Web developer with nearly two years of production experience, based in Hail, Saudi Arabia. Available for remote work now and open to relocation. Runs day-to-day engineering for Road Biker's two live Arabic e-commerce stores and develops its Flutter app; built and operates Wordmark Remover, 239 free file tools with a public API. Stack: React, Next.js, TypeScript, Node.js, PHP, MySQL, Flutter.
+
+## Profile
+
+- Role: Web Developer (React, Next.js, Node.js, PHP)
+- Location: Hail, Saudi Arabia; available for remote work now, open to relocation
+- Experience: nearly two years in production (since January 2025)
+- Contact: mehboobmehboob090@gmail.com · WhatsApp +966 57 646 5853
+- [Portfolio](https://www.mehboobiqbal.site/)
+- [CV (PDF)](https://www.mehboobiqbal.site/assets/Mehboob-Iqbal-CV.pdf)
+- [LinkedIn](https://www.linkedin.com/in/mehboob-iqbal-3b1263190)
+- [GitHub](https://github.com/Mehboobiqbal-dev)
+
+## Experience
+
+- Full-Stack Developer, Road Biker Establishment, Hail, Saudi Arabia (Apr 2026 - present): runs road-biker.com and ilm-roadbiker.com, two live Arabic e-commerce stores with about 7,000 products and over a million visits; rebuilt the OpenCart 3 / Journal 3 storefront on PHP 8.1 and MySQL; integrated Apple Pay, instalment payments, shipping and abandoned-cart flows; migrated the catalogue to a new server while the shop kept trading; develops and maintains the Road Biker Flutter app (5,000+ downloads); administers the Linux servers.
+- Freelance Web Developer, remote (Oct 2025 - Apr 2026): built and runs wordmarkremover.com (Next.js, Node.js, FastAPI, self-hosted AI image models); delivered raskamon.com and thehealthclinicstockholm.com for clients; built CertifiedSkill.
+- Full-Stack Developer (Intern), Centangle Interactive, Islamabad (Apr 2025 - Oct 2025): React, Next.js, Node.js, MongoDB and REST APIs in an Agile team.
+- Web Developer, RobAiotics Corp., remote, United States (Jan 2025 - Apr 2025): React, Next.js and Node.js features and API integrations.
+
+## Projects (all live)
+
+- [Wordmark Remover](https://www.wordmarkremover.com/#toolbox): 239 free PDF, image, video and document tools with a free public API; Next.js, Node.js, FastAPI, Python.
+- [Road Biker](https://road-biker.com/): Arabic-first motorcycle e-commerce store in Saudi Arabia; OpenCart 3, Journal 3, PHP 8.1, MySQL.
+- [ILM Road Biker](https://ilm-roadbiker.com/): second Arabic storefront on the same stack.
+- [Road Biker app](https://apps.apple.com/app/id1438971004): Flutter shopping app, App Store and Google Play, 5,000+ downloads.
+- [CertifiedSkill](https://get-certified-3x6j.vercel.app/): free online certification exams with verifiable certificates; Next.js, MongoDB.
+- [Raska Mon](https://raskamon.com/): online therapy and mental-wellness platform (client project); React, Vite.
+- [The Health Clinic Stockholm](https://thehealthclinicstockholm.com/): bilingual English / Swedish clinic website (client project); WordPress.
+
+## Skills
+
+- Languages: JavaScript, TypeScript, PHP, Python, SQL, Dart
+- Frontend: React, Next.js, Tailwind CSS, MUI, Redux Toolkit, responsive and Arabic right-to-left UI
+- Backend: Node.js, Express, FastAPI, PHP, REST APIs, authentication and role-based access
+- Data and infrastructure: MySQL, PostgreSQL, MongoDB, Docker, Linux, Nginx, Apache, AWS EC2, Vercel, GitHub Actions
+- E-commerce: OpenCart 3, Journal 3, WordPress, Apple Pay and instalment payments, shipping integrations, SEO
+- Mobile: Flutter
+
+## Education
+
+- Full Stack Web Development (6-month programme), e-Hunar, Punjab, Pakistan, 2025
+- React.js certificate, upGrad
+- FSc Pre-Medical, Government Higher Secondary School, Khanewal, 2019 - 2021

@@ -43,6 +43,13 @@ const Home = () => {
         <meta content="Mehboob Iqbal" name="author" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="#09090b" name="theme-color" />
+        <meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots" />
+        <link
+          href="/llms.txt"
+          rel="alternate"
+          title="Profile for AI assistants"
+          type="text/plain"
+        />
         <link href={SITE} rel="canonical" />
 
         {/* Link previews (LinkedIn, WhatsApp, Slack, email) */}
