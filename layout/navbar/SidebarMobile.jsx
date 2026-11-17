@@ -1,60 +1,85 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Link from "next/link";
-import { IoMdClose } from "react-icons/io";
-import { DiTechcrunch } from "react-icons/di";
-
+import { AnimatePresence, motion } from "framer-motion";
+import { HiDocumentArrowDown, HiXMark } from "react-icons/hi2";
 import { NavbarMenu } from "./NavbarItems";
+import Monogram from "./Monogram";
+import { EASE } from "@/components/motion/Motion";
 
-const MobileNavbar = ({ showMenu, setShowMenu }) => {
+const MobileNavbar = ({ showMenu, setShowMenu, active }) => {
+  const close = () => setShowMenu(false);
   return (
-    <Fragment>
-      <div
-        className={`w-full h-screen bg-[rgba(255,255,255,0.3)] dark:bg-[rgba(0,0,0,0.3)] fixed ${
-          showMenu ? null : "hidden"
-        } top-0 left-0 z-10`}
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        {/* Sidebar */}
-        <div
-          className={`w-[70%] h-screen bg-white dark:bg-black shadow-sm shadow-gray-600 dark:shadow-gray-300 ${
-            showMenu ? null : "translate-x-[-450px]"
-          } transition-all duration-1000`}
+    <AnimatePresence>
+      {showMenu ? (
+        <motion.div
+          key="backdrop"
+          className="fixed inset-0 z-[70] bg-black/40 backdrop-blur-sm md:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={close}
         >
-          <div className='p-3 bg-gray-200 dark:bg-gray-800 flex justify-between items-center gap-3'>
-            {/* Name Logo */}
-            <div className='flex items-center gap-2'>
-              <div className='text-white w-8 h-8 bg-[#c72c6c] dark:bg-[#07d0e5] rounded-full flex justify-center items-center'>
-                S
+          <motion.nav
+            aria-label="Sections"
+            className="flex h-full w-[78%] max-w-sm flex-col bg-white shadow-2xl dark:bg-zinc-950"
+            initial={{ x: "-100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-100%" }}
+            transition={{ duration: 0.45, ease: EASE }}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-slate-200 p-4 dark:border-zinc-800">
+              <div className="flex items-center gap-2">
+                <Monogram className="h-8 w-8 text-xs" />
+                <span className="text-lg font-bold tracking-tight">Mehboob Iqbal</span>
               </div>
-              <p className='text-gray-400 flex'>
-                <span className='text-lg font-bold'>Mehbooob</span> <DiTechcrunch />
-              </p>
+              <button aria-label="Close menu" className="p-1 text-2xl" onClick={close}>
+                <HiXMark />
+              </button>
             </div>
 
-            {/* Sidebar Close button */}
-            <button
-              className='text-black dark:text-white text-3xl font-bold'
-              onClick={() => setShowMenu(!showMenu)}
+            <motion.ul
+              className="flex flex-col gap-1 p-3"
+              initial="hidden"
+              animate="show"
+              variants={{ show: { transition: { staggerChildren: 0.05, delayChildren: 0.1 } } }}
             >
-              <IoMdClose />
-            </button>
-          </div>
+              {NavbarMenu.map((item) => {
+                const isActive = active === item.link.slice(1);
+                return (
+                  <motion.li
+                    key={item.name}
+                    variants={{ hidden: { opacity: 0, x: -16 }, show: { opacity: 1, x: 0 } }}
+                  >
+                    <Link
+                      href={item.link}
+                      onClick={close}
+                      className={`block rounded-xl px-4 py-3 text-lg font-semibold transition ${
+                        isActive
+                          ? "bg-zinc-950 text-white dark:bg-white dark:text-zinc-950"
+                          : "hover:bg-slate-100 dark:hover:bg-zinc-900"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </motion.li>
+                );
+              })}
+            </motion.ul>
 
-          <div className='p-2 flex flex-col gap-2'>
-            {/* Navbar Links */}
-            {NavbarMenu.map((navbar) => (
-              <Link
-                className='text-lg p-2 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 rounded'
-                href={navbar.link}
-                key={navbar.name}
+            <div className="mt-auto p-4">
+              <a
+                href="/assets/Mehboob-Iqbal-CV.pdf"
+                download="Mehboob-Iqbal-CV.pdf"
+                className="flex items-center justify-center gap-2 rounded-full bg-red-600 px-5 py-3 font-bold text-white dark:bg-cyan-400 dark:text-zinc-950"
               >
-                {navbar.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </Fragment>
+                <HiDocumentArrowDown /> Download CV
+              </a>
+            </div>
+          </motion.nav>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
   );
 };
 

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { FaCodeBranch, FaHandshake } from "react-icons/fa";
 import { HiArrowUpRight, HiDevicePhoneMobile, HiSparkles } from "react-icons/hi2";
+import { Magnetic, Reveal, SplitText, Stagger, StaggerItem } from "@/components/motion/Motion";
 
 const strengths = [
   {
     title: "End-to-end ownership",
-    text: "I can take a feature from product idea and interface design through APIs, database work, testing, and deployment.",
+    text: "I can take a feature from product idea and interface design through APIs, database work and deployment.",
     icon: <FaCodeBranch />,
   },
   {
@@ -28,29 +29,29 @@ const strengths = [
 const WhyWorkWithMe = () => {
   return (
     <section id="why-me" className="relative overflow-hidden bg-zinc-950 px-5 py-20 text-white md:px-10">
-      <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
-      <div className="absolute -bottom-24 -left-20 h-80 w-80 rounded-full bg-red-500/10 blur-3xl" />
+      <div className="blob-a absolute -right-20 -top-20 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl" />
+      <div className="blob-b absolute -bottom-24 -left-20 h-80 w-80 rounded-full bg-red-500/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-          <div>
+          <Reveal>
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-amber-400">
               Why work with me
             </p>
             <h2 className="mt-4 text-left text-4xl font-black leading-tight md:text-6xl">
-              More than code. I help products move forward.
+              <SplitText text="More than code. I help products move forward." />
             </h2>
             <p className="mt-6 max-w-xl text-left text-lg leading-8 text-zinc-300">
               You get a versatile developer who understands the full product,
               adapts quickly, and cares about the result after launch.
             </p>
-          </div>
+          </Reveal>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <Stagger className="grid gap-4 sm:grid-cols-2" stagger={0.1}>
             {strengths.map((strength) => (
+              <StaggerItem key={strength.title} className="h-full">
               <article
-                key={strength.title}
-                className="interactive-card rounded-3xl border border-zinc-800 bg-zinc-900/80 p-6"
+                className="interactive-card h-full rounded-3xl border border-zinc-800 bg-zinc-900/80 p-6"
               >
                 <div className="inline-flex rounded-2xl bg-white p-3 text-2xl text-red-600">
                   {strength.icon}
@@ -58,11 +59,12 @@ const WhyWorkWithMe = () => {
                 <h3 className="mt-5 text-left text-xl font-bold">{strength.title}</h3>
                 <p className="mt-3 text-left leading-7 text-zinc-400">{strength.text}</p>
               </article>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl bg-gradient-to-r from-red-600 to-rose-500 p-7 md:flex-row md:items-center md:p-9">
+        <Reveal className="mt-12 flex flex-col items-start justify-between gap-6 rounded-3xl bg-gradient-to-r from-red-600 to-rose-500 p-7 md:flex-row md:items-center md:p-9">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-100">
               Have a role or product in mind?
@@ -77,7 +79,7 @@ const WhyWorkWithMe = () => {
           >
             Start a conversation <HiArrowUpRight />
           </Link>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

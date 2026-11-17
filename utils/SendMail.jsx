@@ -1,6 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import { FiMail, FiMessageCircle, FiSend } from "react-icons/fi";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiDocumentArrowDown } from "react-icons/hi2";
+import { CONTACT } from "@/utils/SocialMedia";
+import { Reveal, SplitText } from "@/components/motion/Motion";
+import { copyEmail } from "@/components/commands";
 
 const initialForm = {
   name: "",
@@ -49,8 +55,8 @@ const SendMail = () => {
     "w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-left text-zinc-950 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:bg-zinc-900 dark:text-white";
 
   return (
-    <section id="getInTouch" className="px-5 py-20 shadow-sm shadow-zinc-300 dark:shadow-zinc-800 md:px-10">
-      <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl shadow-slate-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/30 lg:grid-cols-[0.8fr_1.2fr]">
+    <section id="getInTouch" className="px-5 py-20 shadow-sm shadow-zinc-300 dark:shadow-zinc-800 md:px-10 md:py-24">
+      <Reveal className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl shadow-slate-200/60 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/30 lg:grid-cols-[0.8fr_1.2fr]">
         <div className="bg-zinc-950 p-8 text-white md:p-12">
           <div className="inline-flex rounded-2xl bg-cyan-400 p-3 text-2xl text-zinc-950">
             <FiMessageCircle />
@@ -59,17 +65,47 @@ const SendMail = () => {
             Get in touch
           </p>
           <h2 className="mt-3 text-left text-4xl font-black leading-tight">
-            Have a project, role, or idea?
+            <SplitText text="Hiring, or have a project?" />
           </h2>
           <p className="mt-5 text-left leading-8 text-zinc-300">
-            Tell me what you&apos;re building and where you need help. Your message
-            will arrive directly in my inbox.
+            I can start remotely now and I am open to relocating. Send a message
+            here, or reach me directly.
           </p>
-          <a
-            href="mailto:mehboobmehboob090@gmail.com"
-            className="mt-8 inline-flex items-center gap-3 text-left font-semibold text-cyan-300 hover:text-cyan-200"
+          <ul className="mt-8 space-y-3">
+            {[
+              { href: `mailto:${CONTACT.email}`, icon: <FiMail />, text: CONTACT.email },
+              { href: CONTACT.whatsapp, icon: <BsWhatsapp />, text: `WhatsApp ${CONTACT.phone}` },
+              { href: CONTACT.linkedin, icon: <FaLinkedinIn />, text: "LinkedIn profile" },
+            ].map((item) => (
+              <li key={item.text}>
+                <a
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 break-all text-left font-semibold text-cyan-300 transition hover:text-cyan-200"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10 transition group-hover:bg-cyan-400 group-hover:text-zinc-950">
+                    {item.icon}
+                  </span>
+                  {item.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <button
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm font-bold text-white transition hover:border-cyan-300 hover:text-cyan-200"
+            onClick={copyEmail}
+            type="button"
           >
-            <FiMail /> mehboobmehboob090@gmail.com
+            <FiMail /> Copy my email
+          </button>
+          <br />
+          <a
+            href="/assets/Mehboob-Iqbal-CV.pdf"
+            download="Mehboob-Iqbal-CV.pdf"
+            className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 font-bold text-zinc-950 transition hover:-translate-y-0.5 hover:bg-amber-300"
+          >
+            <HiDocumentArrowDown /> Download my CV
           </a>
         </div>
 
@@ -162,7 +198,7 @@ const SendMail = () => {
             </p>
           ) : null}
         </form>
-      </div>
+      </Reveal>
     </section>
   );
 };

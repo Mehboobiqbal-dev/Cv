@@ -1,40 +1,49 @@
+// Same roles, titles and dates as the CV (public/assets/Mehboob-Iqbal-CV.pdf). A recruiter who opens
+// both should see one story.
 export const ExperienceData = [
   {
-    companyName: "Roadbiker Hail",
+    companyName: "Road Biker Establishment",
     location: "Hail, Saudi Arabia",
-    role: "Full-Stack & Flutter Developer",
+    role: "Full-Stack Developer",
     fromTo: "Apr 2026 - Present",
     current: true,
     description:
-      "Building and improving the Road Biker digital ecosystem across e-commerce, internal services, and customer-facing mobile products.",
+      "Run day-to-day engineering for road-biker.com and ilm-roadbiker.com, two live Arabic e-commerce stores with about 7,000 products and over a million visits, and the Road Biker Flutter app.",
     highlights: [
-      "Built two Flutter applications: Road Biker and Road Biker Service.",
-      "Developed and maintained PHP and MySQL services, APIs, and commerce workflows.",
-      "Delivered responsive, Arabic-first experiences for road-biker.com and ilm-roadbiker.com.",
+      "Rebuilt the OpenCart 3 storefront on PHP 8.1 and MySQL with right-to-left layouts and SEO-friendly URLs.",
+      "Migrated products, customers, orders and SEO URLs to a new server while the shop kept trading.",
+      "Integrated Apple Pay, instalment payments, shipping and abandoned-cart flows; find and fix checkout, API and server failures in production.",
+      "Develop and maintain the Road Biker Flutter shopping app (App Store and Google Play, 5,000+ downloads).",
+      "Administer the Linux servers: Apache / PHP-FPM tuning, caching and database work.",
+    ],
+  },
+  {
+    companyName: "Self-employed",
+    location: "Remote",
+    role: "Freelance Web Developer",
+    fromTo: "Oct 2025 - Apr 2026",
+    description:
+      "Built and run Wordmark Remover (239 free file tools with a public API on Next.js, Node.js and FastAPI), and delivered client sites to production.",
+    highlights: [
+      "wordmarkremover.com: Next.js front end, Node.js and FastAPI services, self-hosted AI image models.",
+      "Client projects: raskamon.com (online therapy platform) and thehealthclinicstockholm.com (clinic website).",
+      "Built CertifiedSkill, a certification and assessment platform, in React and Next.js.",
     ],
   },
   {
     companyName: "Centangle Interactive",
-    location: "Remote",
-    role: "Full-Stack Developer",
-    fromTo: "Apr 2025 - Apr 2026",
-    description:
-      "Developed scalable frontend modules with Next.js, React, micro-frontend architecture, and .NET APIs. Contributed to planning, code reviews, and cross-functional delivery of enterprise-grade solutions.",
-  },
-  {
-    companyName: "Robiatics Corp",
     location: "Islamabad, Pakistan",
-    role: "Web Developer",
-    fromTo: "Dec 2024 - Apr 2025",
+    role: "Full-Stack Developer (Intern)",
+    fromTo: "Apr 2025 - Oct 2025",
     description:
-      "Built and maintained responsive web interfaces in collaboration with designers and backend developers, with a focus on performance, UI consistency, and real-time data visualization.",
+      "Built features across React, Next.js, Node.js, MongoDB and REST APIs in an Agile team; took part in code reviews, planning and production debugging. Used server-side rendering, static generation and reusable components to improve page speed and maintainability.",
   },
   {
-    companyName: "Purqle LLC",
-    location: "Istanbul, Turkey",
-    role: "Virtual Assistant",
-    fromTo: "Feb 2024 - Dec 2024",
+    companyName: "RobAiotics Corp.",
+    location: "Remote - United States",
+    role: "Web Developer",
+    fromTo: "Jan 2025 - Apr 2025",
     description:
-      "Supported product sourcing, marketing, structured data management, research, reporting, documentation, email correspondence, and project coordination.",
+      "Built responsive React, Next.js and Node.js features and API integrations for production, working remotely with a US team.",
   },
 ];

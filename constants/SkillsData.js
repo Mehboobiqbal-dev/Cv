@@ -14,10 +14,16 @@ import {
   SiJquery,
   SiFastapi,
   SiFlutter,
+  SiDocker,
+  SiPostgresql,
+  SiLinux,
+  SiNginx,
+  SiWordpress,
 } from "react-icons/si";
 import { DiJavascript1, DiReact, DiMongodb, DiSass, DiPython } from "react-icons/di";
 import { BsGit, BsGithub } from "react-icons/bs";
-import { FaBootstrap, FaCss3Alt, FaAngular, FaPhp, FaShopify, FaJava } from "react-icons/fa";
+import { FaBootstrap, FaCss3Alt, FaAngular, FaPhp, FaShopify, FaJava, FaOpencart } from "react-icons/fa";
+import { HiSwatch } from "react-icons/hi2";
 import { TbBrandReactNative } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
 
@@ -26,20 +32,28 @@ export const TechStackData = [
   {
     Advance: [
       {
-        name: "ReactJS",
+        name: "React",
         icon: <DiReact className="md:text-4xl text-2xl" color="#53c1de" />,
       },
       {
-        name: "NextJS",
+        name: "Next.js",
         icon: <SiNextdotjs className="md:text-4xl text-2xl dark:text-white text-black" />,
 
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="md:text-4xl text-2xl" color="#377cc8" />,
+      },
+      {
+        name: "Node.js",
+        icon: <SiNodedotjs className="md:text-4xl text-2xl" color="#4caf50" />,
       },
       {
         name: "JavaScript",
         icon: <DiJavascript1 className="md:text-4xl text-2xl" color="#ffd600" />,
       },
       {
-        name: "Redux-toolkit",
+        name: "Redux Toolkit",
         icon: <SiRedux className="md:text-4xl text-2xl" color="#7e57c2" />,
       },
       {
@@ -53,6 +67,14 @@ export const TechStackData = [
       {
         name: "MySQL",
         icon: <GrMysql className="md:text-4xl text-2xl" color="#4479A1" />,
+      },
+      {
+        name: "OpenCart",
+        icon: <FaOpencart className="md:text-4xl text-2xl" color="#23a1d1" />,
+      },
+      {
+        name: "Journal 3",
+        icon: <HiSwatch className="md:text-4xl text-2xl" color="#f97316" />,
       },
       {
         name: "Flutter",
@@ -80,26 +102,38 @@ export const TechStackData = [
         icon: <SiVercel className="dark:text-white text-black md:text-4xl text-2xl" />,
       },
       {
-        name: "Github",
+        name: "GitHub",
         icon: <BsGithub className="md:text-4xl text-2xl" color="#c9d1d9" />,
       },
     ],
     Good: [
       {
+        name: "PostgreSQL",
+        icon: <SiPostgresql className="md:text-4xl text-2xl" color="#336791" />,
+      },
+      {
+        name: "Docker",
+        icon: <SiDocker className="md:text-4xl text-2xl" color="#2496ed" />,
+      },
+      {
+        name: "Linux",
+        icon: <SiLinux className="md:text-4xl text-2xl dark:text-white text-black" />,
+      },
+      {
+        name: "Nginx",
+        icon: <SiNginx className="md:text-4xl text-2xl" color="#009639" />,
+      },
+      {
+        name: "WordPress",
+        icon: <SiWordpress className="md:text-4xl text-2xl" color="#21759b" />,
+      },
+      {
         name: "FastAPI",
         icon: <SiFastapi className="md:text-4xl text-2xl" color="#009688" />,
       },
       {
-        name: "NodeJS",
-        icon: <SiNodedotjs className="md:text-4xl text-2xl" color="#4caf50" />,
-      },
-      {
         name: "Express",
         icon: <SiExpress className="md:text-4xl text-2xl" color="#555555" />,
-      },
-      {
-        name: "TypeScript",
-        icon: <SiTypescript className="md:text-4xl text-2xl" color="#377cc8" />,
       },
       {
         name: "MongoDB",
@@ -133,7 +167,7 @@ export const TechStackData = [
         icon: <TbBrandReactNative className="md:text-4xl text-2xl" color="#66dbfb" />,
       },
       {
-        name: "JAVA",
+        name: "Java",
         icon: <FaJava className="md:text-4xl text-2xl" color="#547c99" />,
       },
       {
@@ -146,33 +180,12 @@ export const TechStackData = [
       },
     ],
     Others: [
-      {
-        name: "Programming Languages: HTML, CSS, JavaScript, PHP, XML, JSX, Node.js",
-      },
-      {
-        name: "Full Stack Web Development",
-      },
-      {
-        name: "Frameworks/Libraries: React.js, Bootstrap, Express.js",
-      },
-      {
-        name: "AI Integration: Experience with integrating",
-      },
-      {
-        name: "CMS Platforms: WordPress (Theme & Plugin Development, Customization)",
-      },
-      {
-        name: "Databases: MySQL, MongoDB",
-      },
-      {
-        name: "Tools & Technologies: Git, GitHub, Replit, VS Code",
-      },
-      {
-        name: "Deployment & Hosting: Knowledge of cloud platforms (Heroku, AWS), CI/CD, server management",
-      },
-      {
-        name: "Other Skills: Responsive Web Design, SEO",
-      },
+      { name: "Languages: JavaScript, TypeScript, PHP, Python, SQL, Dart" },
+      { name: "Frontend: React, Next.js, Tailwind CSS, MUI, Redux Toolkit, responsive and Arabic right-to-left UI" },
+      { name: "Backend: Node.js, Express, FastAPI, PHP, REST APIs, authentication and role-based access" },
+      { name: "Databases: MySQL, PostgreSQL, MongoDB" },
+      { name: "E-commerce: OpenCart 3, Journal 3, WordPress, Apple Pay and instalment payments, shipping integrations, SEO" },
+      { name: "Infrastructure: Linux, Docker, Nginx, Apache, AWS EC2, Vercel, GitHub Actions, Git" },
     ],
   },
 ];
