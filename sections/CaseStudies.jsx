@@ -165,15 +165,15 @@ const CaseStudies = () => {
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <Reveal>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-red-600 dark:text-cyan-400">Case studies</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-red-600 dark:text-cyan-400">Featured work</p>
           </Reveal>
           <h2 className="mt-3 text-center text-4xl font-black tracking-tight md:text-6xl">
-            <SplitText text="Two systems I build and run" />
+            <SplitText text="A closer look at what I build" />
           </h2>
           <Reveal delay={0.2}>
             <p className="mt-5 text-center text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg">
-              The problem, what I did, and the result. Scroll on: each screenshot moves through its live
-              site as you read.
+              Every project on this page is mine, and every one is live. Here are two in depth: the problem,
+              what I did and the result. Each screenshot moves through its live site as you scroll.
             </p>
           </Reveal>
         </div>

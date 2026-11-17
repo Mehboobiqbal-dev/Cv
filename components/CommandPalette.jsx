@@ -19,8 +19,8 @@ import { CONTACT } from "@/utils/SocialMedia";
 
 const SECTIONS = [
   ["Home", "home"],
-  ["Case studies", "work"],
-  ["More live work", "project"],
+  ["Featured work", "work"],
+  ["More projects", "project"],
   ["Experience", "experience"],
   ["About", "about"],
   ["Tech stack", "techStack"],

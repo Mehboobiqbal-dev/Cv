@@ -20,11 +20,11 @@ const Projects = () => {
             Selected work
           </p>
           <h2 className="flex items-center justify-center gap-3 text-3xl font-black tracking-tight md:text-5xl">
-            <CgWebsite /> <SplitText text="More live work" />
+            <CgWebsite /> <SplitText text="More projects I built" />
           </h2>
           <p className="mt-5 text-center text-base leading-7 text-slate-600 dark:text-slate-300 md:text-lg">
-            The app and second store from my current job, my own web app, and
-            client sites. Every project here is live today: open any of them.
+            The Flutter app and second store from my current job, my certification
+            platform, and client sites I delivered. All live today: open any of them.
           </p>
         </Reveal>
 
